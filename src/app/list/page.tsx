@@ -15,7 +15,7 @@ export default async function List() {
       </Link>
       {result.reverse().map((item, index) => (
         <Link href={`/detail/${item._id.toString()}`} key={index}>
-          <Card title={item.title} />
+          <Card title={item.title} id={item._id.toString()} />
         </Link>
       ))}
     </div>
