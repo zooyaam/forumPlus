@@ -1,7 +1,10 @@
+import List from "../list/page";
+
 export default function Home() {
   return (
-    <div>
+    <div className="h-screen">
       <div>Home</div>
+      <List />
     </div>
   );
 }

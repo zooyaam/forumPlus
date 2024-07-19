@@ -21,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={fontSans.variable}>{children}</body>
+      <body className={fontSans.variable + " bg-gray-50 max-h-screen"}>
+        {children}
+      </body>
     </html>
   );
 }

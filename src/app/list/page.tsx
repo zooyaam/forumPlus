@@ -8,7 +8,12 @@ export default async function List() {
   let result = await db.collection("post").find().toArray();
   return (
     <div className="flex m-10 flex-col gap-6">
-      {result.map((item, index) => (
+      <Link href="/write">
+        <span className="bg-secondary-200 hover:bg-secondary-200/80 duration-200 py-3 px-4 rounded-xl">
+          WRITE
+        </span>
+      </Link>
+      {result.reverse().map((item, index) => (
         <Link href={`/detail/${item._id.toString()}`} key={index}>
           <Card title={item.title} />
         </Link>

@@ -16,10 +16,8 @@ export default async function DetailPage(postId: PostId) {
     .collection("post")
     .findOne({ _id: new ObjectId(postId.params.id) });
   return (
-    <div className="bg-gray-100 h-[10000px]">
-      <div className="pt-10">
-        <DetailCard title={result?.title} content={result?.content} />
-      </div>
+    <div className="pt-10">
+      <DetailCard title={result?.title} content={result?.content} />
     </div>
   );
 }
