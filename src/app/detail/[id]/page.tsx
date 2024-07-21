@@ -1,4 +1,4 @@
-import DetailCard from "@/src/components/ui/detail";
+import DetailCard from "@/src/components/ui/card/detail-card";
 
 import { connectDB } from "@/src/util/db";
 import { ObjectId } from "mongodb";

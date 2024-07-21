@@ -1,4 +1,4 @@
-import Card from "@/src/components/ui/card";
+import ListCard from "@/src/components/ui/card/list-card";
 import { connectDB } from "@/src/util/db";
 import Link from "next/link";
 
@@ -15,7 +15,7 @@ export default async function List() {
       </Link>
       {result.reverse().map((item, index) => (
         <Link href={`/detail/${item._id.toString()}`} key={index}>
-          <Card title={item.title} id={item._id.toString()} />
+          <ListCard title={item.title} id={item._id.toString()} />
         </Link>
       ))}
     </div>
