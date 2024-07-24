@@ -13,10 +13,9 @@ export default async function List() {
           WRITE
         </span>
       </Link>
+
       {result.reverse().map((item, index) => (
-        <Link href={`/detail/${item._id.toString()}`} key={index}>
-          <ListCard title={item.title} id={item._id.toString()} />
-        </Link>
+        <ListCard key={index} title={item.title} id={item._id.toString()} />
       ))}
     </div>
   );
