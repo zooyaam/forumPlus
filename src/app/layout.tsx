@@ -1,10 +1,9 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
-import LoginBtn from "../components/ui/button/login-btn";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import Header from "../components/ui/layout/header";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 const fontSans = localFont({
   src: "../fonts/PretendardVariable.woff2",
