@@ -9,7 +9,7 @@ export default async function handler(req: any, res: any) {
 
   let session = await getServerSession(req, res, authOptions);
   if (session) {
-    req.body.author = session.user.email;
+    req.body.author = session.user?.email;
   }
 
   if (req.method === "DELETE") {
