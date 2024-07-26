@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import LoginBtn from "../button/login-btn";
-import LogoutBtn from "../button/logout-btn";
-import RegisterBtn from "../button/register-btn";
+import AuthBtn from "../button/auth-btn";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
-export default function Header() {
+export default async function Header() {
+  let session = await getServerSession(authOptions);
+
   return (
     <header className="bg-white px-5 flex justify-between items-center">
       <Link href="/list" className="flex items-center gap-1 p-5">
@@ -12,11 +14,16 @@ export default function Header() {
         <h1 className="text-2xl font-bold tracking-tight pr-2">DOTORY</h1>
       </Link>
 
-      <div className="flex gap-3 pr-5">
-        <RegisterBtn />
-        <LoginBtn />
-        <LogoutBtn />
-      </div>
+      {session ? (
+        <div className="flex gap-3 pr-5">
+          <AuthBtn action="sign-out" />
+        </div>
+      ) : (
+        <div className="flex gap-3 pr-5">
+          <AuthBtn action="sign-up" />
+          <AuthBtn action="sign-in" />
+        </div>
+      )}
     </header>
   );
 }
