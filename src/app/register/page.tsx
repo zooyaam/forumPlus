@@ -1,7 +1,7 @@
 export default function Register() {
   return (
     <div className="flex flex-col gap-10 justify-center items-centers">
-      <h1 className="text-3xl mx-auto pt-20 font-bold">게시글 수정하기</h1>
+      <h1 className="text-3xl mx-auto pt-20 font-bold">회원가입</h1>
 
       <div className="rounded-3xl w-2/3 flex flex-col gap-8 mx-auto px-10 py-6 bg-white">
         <form action="/api/auth/signup" method="POST" className="flex flex-col">

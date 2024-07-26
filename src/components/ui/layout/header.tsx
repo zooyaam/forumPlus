@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LoginBtn from "../button/login-btn";
 import LogoutBtn from "../button/logout-btn";
+import RegisterBtn from "../button/register-btn";
 
 export default function Header() {
   return (
@@ -12,6 +13,7 @@ export default function Header() {
       </Link>
 
       <div className="flex gap-3 pr-5">
+        <RegisterBtn />
         <LoginBtn />
         <LogoutBtn />
       </div>
