@@ -8,7 +8,9 @@ export default async function handler(req: any, res: any) {
 
   let session = await getServerSession(req, res, authOptions);
   if (session) {
-    req.body.author = session.user?.email; // Add null check before accessing 'email' property
+    req.body.author = session.user?.email;
+    req.body.name = session.user?.name;
+    req.body.user_profile = session.user?.image;
   }
 
   if (req.method === "POST") {
