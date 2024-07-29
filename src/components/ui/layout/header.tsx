@@ -14,7 +14,7 @@ export default async function Header() {
         <h1 className="text-2xl font-bold tracking-tight pr-2">DOTORY</h1>
       </Link>
 
-      {session ? (
+      {/* {session ? (
         <div className="flex gap-3 pr-5">
           <AuthBtn action="sign-out" />
         </div>
@@ -23,7 +23,7 @@ export default async function Header() {
           <AuthBtn action="sign-up" />
           <AuthBtn action="sign-in" />
         </div>
-      )}
+      )} */}
     </header>
   );
 }
