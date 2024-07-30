@@ -4,7 +4,7 @@ import { authOptions } from "../auth/[...nextauth]";
 
 export default async function handler(req: any, res: any) {
   let client = await connectDB;
-  const db = client.db("dotory");
+  const db = client.db("forum");
 
   let session = await getServerSession(req, res, authOptions);
   if (session) {

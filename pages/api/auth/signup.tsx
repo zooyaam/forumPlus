@@ -6,7 +6,7 @@ export default async function handler(req: any, res: any) {
     const hash = await bcrypt.hash(req.body.password, 10);
     req.body.password = hash;
 
-    let db = (await connectDB).db("dotory");
+    let db = (await connectDB).db("forum");
     await db.collection("user_cred").insertOne(req.body);
     res.status(200).json("성공");
   }

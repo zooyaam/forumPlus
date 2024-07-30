@@ -11,7 +11,7 @@ type PostId = {
 
 export default async function EditPage(postId: PostId) {
   let client = await connectDB;
-  const db = client.db("dotory");
+  const db = client.db("forum");
   let result = await db
     .collection("post")
     .findOne({ _id: new ObjectId(postId.params.id) });

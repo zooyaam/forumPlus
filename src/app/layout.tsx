@@ -13,8 +13,8 @@ const fontSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DOTORY",
-  description: "DOTORY Community",
+  title: "forumPlus",
+  description: "forum plus Community",
 };
 
 export default async function RootLayout({

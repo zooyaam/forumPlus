@@ -34,7 +34,7 @@ export const authOptions: AuthOptions = {
           return null;
         }
 
-        let db = (await connectDB).db("dotory");
+        let db = (await connectDB).db("forum");
         let user = await db
           .collection("user_cred")
           .findOne({ email: credentials.email });
