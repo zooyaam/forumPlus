@@ -12,15 +12,19 @@ export default async function ProfileCard() {
       {session ? (
         <div>
           <div className="flex gap-6 items-center pb-5 border-b">
-            <Image
-              src={
-                session?.user?.image ? session?.user?.image : "/black-icon.svg"
-              }
-              alt="내 프로필 사진"
-              width={60}
-              height={60}
-              className="rounded-full bg-slate-400"
-            />
+            <span className="size-16 rounded-full">
+              <Image
+                src={
+                  session?.user?.image
+                    ? session?.user?.image
+                    : "/black-icon.svg"
+                }
+                alt="내 프로필 사진"
+                width={50}
+                height={50}
+                className="bg-slate-200"
+              />
+            </span>
             <div>
               <p className="font-bold text-lg">{session?.user?.name}</p>
               <p className="text-gray-500/80 font-medium">
@@ -45,12 +49,14 @@ export default async function ProfileCard() {
             >
               프로필 수정
             </Link>
+            <AuthBtn action="sign-out" />
           </div>
         </div>
       ) : (
         <div>
           <p>로그인 후 이용하세요</p>
           <AuthBtn action="sign-in" />
+          <AuthBtn action="sign-up" />
         </div>
       )}
     </div>

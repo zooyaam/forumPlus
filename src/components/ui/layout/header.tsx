@@ -9,8 +9,8 @@ export default async function Header() {
 
   return (
     <header className="bg-white px-10 flex justify-between items-center">
-      <Link href="/list" className="flex items-center gap-1 p-5">
-        <Image src="/black-icon.svg" alt="대표 로고" width={27} height={27} />
+      <Link href="/list" className="flex items-center gap-2 p-5">
+        <Image src="/black-icon.svg" alt="대표 로고" width={32} height={32} />
         <h1 className="text-2xl font-bold tracking-tight pr-2">forumPlus</h1>
       </Link>
     </header>
