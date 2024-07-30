@@ -1,8 +1,8 @@
 import Link from "next/link";
-import PostBtn from "../button/post-btn";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import Image from "next/image";
+import Dropdown from "../dropdown";
 
 interface CardProps {
   author?: string;
@@ -38,7 +38,7 @@ export default async function ListCard({
               />
               <p>{name}</p>
             </div>
-            <p>2020년 1월 2일</p>
+            <p className="pr-10 opacity-50">2020년 1월 2일</p>
           </div>
           <div className="flex justify-between">
             <div>
@@ -58,11 +58,10 @@ export default async function ListCard({
         </div>
       </Link>
       {author === session?.user?.email ? (
-        <div className="absolute right-4 top-4 flex space-x-2">
-          <PostBtn action="edit" id={id} />
-          <PostBtn action="delete" id={id} />
-        </div>
-      ) : null}
+        <Dropdown type="own" id={id} className="absolute right-5 top-4" />
+      ) : (
+        <Dropdown type="other" id={id} className="absolute right-5 top-4" />
+      )}
     </div>
   );
 }

@@ -12,9 +12,7 @@ export default function PostBtn({ action, id }: BtnTypeProps) {
     <div>
       {action === "edit" ? (
         <Link href={`/edit/${id}`}>
-          <span className="bg-secondary-300 cursor-pointer font-medium py-0.5 px-2 rounded-lg">
-            수정 ✏️
-          </span>
+          <span className="cursor-pointer px-1">수정하기</span>
         </Link>
       ) : (
         <span
@@ -25,9 +23,9 @@ export default function PostBtn({ action, id }: BtnTypeProps) {
               }
             )
           }
-          className="bg-secondary-400 cursor-pointer font-medium py-0.5 px-2 rounded-lg"
+          className="cursor-pointer px-1"
         >
-          삭제 🗑️
+          삭제하기
         </span>
       )}
     </div>
