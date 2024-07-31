@@ -15,6 +15,7 @@ export default function CommentInput({ postId }: CommentProps) {
 
   return (
     <div className="rounded-3xl border p-4 flex gap-2">
+      {/* TODO: auto height (max: 4cols) */}
       <textarea
         name="comment"
         value={comment}
