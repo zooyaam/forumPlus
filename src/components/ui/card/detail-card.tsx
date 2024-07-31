@@ -4,6 +4,8 @@ interface DetailCardProps {
   content: string;
 }
 
+// TODO: add image
+
 export default function DetailCard({ title, image, content }: DetailCardProps) {
   return (
     <div className="rounded-3xl flex flex-col gap-8 border px-10 py-6">

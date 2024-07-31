@@ -13,6 +13,10 @@ interface CardProps {
   post_img?: string;
 }
 
+// TODO: add thumbnail image
+// TODO: add like count & view count
+// TODO: add creation time
+
 export default async function ListCard({
   title,
   id,

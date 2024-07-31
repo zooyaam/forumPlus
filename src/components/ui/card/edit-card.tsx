@@ -8,6 +8,8 @@ interface EditCardProps {
   content: string;
 }
 
+// TODO: add image
+
 export default function EditCard({ id, title, image, content }: EditCardProps) {
   return (
     <div className="flex flex-col gap-10 justify-center items-centers">

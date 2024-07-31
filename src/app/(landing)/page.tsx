@@ -1,10 +1,7 @@
-import List from "../list/page";
-
-export default function Home() {
+export default function Landing() {
   return (
-    <div className="h-screen">
-      <div>Home</div>
-      <List />
+    <div>
+      <div>landing page</div>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import { connectDB } from "@/src/util/db";
-import { ReactNode } from "react";
+
+// TODO: add user profile & creation time
 
 export default async function CommentCard() {
   let client = await connectDB;
   const db = client.db("forum");
   let result = await db.collection("comment").find().toArray();
-  console.log(result);
 
   return (
     <div className="border rounded-3xl px-8 py-4">
