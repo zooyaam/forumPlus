@@ -1,9 +1,8 @@
-import CommentCard from "@/src/components/ui/card/comment-card";
+import Comment from "./comment";
 import DetailCard from "@/src/components/ui/card/detail-card";
-import CommentInput from "@/src/components/ui/input/comment-input";
 
-import { connectDB } from "@/src/util/db";
 import { ObjectId } from "mongodb";
+import { connectDB } from "@/src/util/db";
 
 type PostId = {
   params: {
@@ -21,8 +20,7 @@ export default async function DetailPage({ params }: PostId) {
   return (
     <div className="pt-10 mx-auto w-2/3">
       <DetailCard title={result?.title} content={result?.content} />
-      {result ? <CommentCard post_id={result._id.toString()} /> : null}
-      <CommentInput postId={params.id} />
+      <Comment postId={params.id} />
     </div>
   );
 }

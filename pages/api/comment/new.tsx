@@ -17,6 +17,6 @@ export default async function handler(req: any, res: any) {
 
   if (req.method === "POST") {
     await db.collection("comment").insertOne(comment);
-    res.status(200).json("댓글 작성완료");
+    res.status(200).json({ message: "댓글 작성완료", author: comment.author });
   }
 }
