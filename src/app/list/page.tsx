@@ -3,6 +3,8 @@ import ProfileCard from "@/src/components/ui/card/profile-card";
 import { connectDB } from "@/src/util/db";
 import Image from "next/image";
 
+// TODO: use AJAX to delete posts
+
 export default async function List() {
   let client = await connectDB;
   const db = client.db("forum");

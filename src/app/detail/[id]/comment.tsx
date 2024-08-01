@@ -9,7 +9,7 @@ interface CommentProps {
 }
 
 // TODO: textarea auto height (max: 4cols)
-// TODO: use AJAX to delete posts and update UI
+// TODO: use AJAX to update UI
 // TODO: add user profile & creation time
 
 export default function Comment({ postId }: CommentProps) {
