@@ -11,6 +11,17 @@ const config: Config = {
     extend: {
       screens: {},
       colors: {
+        black: {
+          100: "#DCDCDC",
+          200: "#BEBEBE",
+          300: "#8C8C8C",
+          400: "#595959",
+          500: "#2E2E2E",
+          600: "#1C1C1C",
+          700: "#16181D",
+          800: "#0D0D0D",
+          900: "#000000",
+        },
         gray: {
           100: "#FFFFFF",
           200: "#F8F9FB",
