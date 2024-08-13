@@ -45,7 +45,13 @@ export default async function ProfileCard() {
             </Link>
             <Link
               href="/profile"
-              className="bg-yellow-100 text-yellow-500 text-center whitespace-nowrap py-2 duration-200 rounded-xl"
+              className="bg-yellow-100 text-yellow-600 text-center whitespace-nowrap py-2 duration-200 rounded-xl"
+            >
+              프로필 수정
+            </Link>
+            <Link
+              href="/profile"
+              className="bg-yellow-500 text-white text-center whitespace-nowrap py-2 duration-200 rounded-xl"
             >
               프로필 수정
             </Link>
