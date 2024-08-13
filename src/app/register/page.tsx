@@ -37,7 +37,7 @@ export default function Register() {
 
           <button
             type="submit"
-            className="bg-primary-400 text-white text-xl font-semibold py-2 rounded-lg"
+            className="bg-black-600 text-white text-xl font-semibold py-2 rounded-lg"
           >
             완료
           </button>

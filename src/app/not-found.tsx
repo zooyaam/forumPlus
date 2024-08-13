@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <div className="flex shadow-lg m-5 py-10 gap-10 px-20 justify-between">
       <div className="flex flex-col gap-10">
-        <p className="text-[#FF5555] font-bold text-6xl">404 Error Page</p>
+        <p className="text-pink-900 font-bold text-6xl">404 Error Page</p>
         <div>
           <p className="font-semibold text-4xl pb-3">Page not found</p>
           <p className="text-xl pb-32">
@@ -13,14 +13,14 @@ export default function NotFound() {
           </p>
           <Link
             href="/"
-            className="bg-[#FF5555] w-fit text-white cursor-pointer hover:opacity-80 duration-300 p-2 rounded-md"
+            className="bg-pink-900 w-fit text-white cursor-pointer hover:opacity-80 duration-300 p-2 rounded-md"
           >
             🏠 Go Home
           </Link>
         </div>
       </div>
 
-      <div className="">
+      <div>
         <Image
           src="/404-error.jpg"
           width={500}

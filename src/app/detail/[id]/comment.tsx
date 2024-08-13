@@ -53,7 +53,7 @@ export default function Comment({ postId }: CommentProps) {
           }}
           rows={1}
           cols={30}
-          className="bg-blue-50 px-5 py-1.5 resize-none rounded-full"
+          className="bg-blue-100 px-5 py-1.5 resize-none rounded-full"
         />
         <button
           onClick={() => {
@@ -67,7 +67,7 @@ export default function Comment({ postId }: CommentProps) {
               setData([...data, { author: "me", content: comment }]);
             });
           }}
-          className="flex items-center hover:bg-gray-200/50 duration-200 px-2 rounded-full"
+          className="flex items-center hover:bg-black-100/50 duration-200 px-2.5 rounded-full"
         >
           <PaperPlaneIcon className="opacity-50 size-4" />
         </button>

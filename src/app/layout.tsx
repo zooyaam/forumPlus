@@ -25,9 +25,9 @@ export default async function RootLayout({
   await getServerSession(authOptions);
   return (
     <html lang="ko">
-      <body className={fontSans.variable + "max-h-screen px-20"}>
+      <body className={fontSans.variable + " bg-gray-200 max-h-screen"}>
         <Header />
-        {children}
+        <div className="px-20">{children}</div>
       </body>
     </html>
   );

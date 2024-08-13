@@ -38,26 +38,32 @@ export default function Dropdown({ type, id, className }: DropdownProps) {
     <div className={className} ref={dropdownRef}>
       <DotsVerticalIcon
         onClick={handleDropdown}
-        className="size-6 p-1 hover:bg-slate-100 rounded-lg duration-200"
+        className={
+          `size-6 p-1 rounded-lg duration-200` +
+          (isOpen ? " bg-blue-50/70" : " hover:bg-blue-50/70")
+        }
       />
       {isOpen && (
-        <div className="absolute flex drop-shadow-sm flex-col gap-1 w-28 left-[-10px] top-12 bg-white border rounded-lg p-2">
+        <div
+          className="absolute flex shadow-[0px_10px_15px_-10px_rgba(0,0,0,0.1)] flex-col gap-1 w-32 left-0
+         top-7 bg-white border rounded-lg px-2 py-2.5"
+        >
           {type === "own" ? (
             <>
-              <span className="hover:bg-slate-100 duration-200 py-1 rounded-lg">
+              <span className="hover:bg-blue-50/70 duration-200 py-1.5 rounded-lg">
                 <PostBtn action="edit" id={id} />
               </span>
-              <span className="hover:bg-slate-100 duration-200 py-1 rounded-lg">
+              <span className="hover:bg-blue-50/70 duration-200 py-1.5 rounded-lg">
                 <PostBtn action="delete" id={id} />
               </span>
             </>
           ) : (
             <>
-              <span className="hover:bg-slate-100 duration-200 py-1 rounded-lg">
-                신고하기
+              <span className="hover:bg-blue-50/70 duration-200 py-1.5 rounded-lg">
+                <PostBtn action="message" id={id} />
               </span>
-              <span className="hover:bg-slate-100 duration-200 py-1 rounded-lg">
-                쪽지하기
+              <span className="hover:bg-blue-50/70 duration-200 py-1.5 rounded-lg">
+                <PostBtn action="report" id={id} />
               </span>
             </>
           )}

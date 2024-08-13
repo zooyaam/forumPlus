@@ -23,7 +23,7 @@ export default function WritePage() {
           />
           <button
             type="submit"
-            className="bg-secondary-300 mt-10 rounded-xl py-3 text-lg font-semibold"
+            className="bg-black-600 text-white mt-10 rounded-xl py-3 text-lg font-semibold"
           >
             완료
           </button>

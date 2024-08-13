@@ -48,14 +48,14 @@ export default function EditCard({ id, title, image, content }: EditCardProps) {
           <div className="flex gap-6 mt-10">
             <button
               type="submit"
-              className="bg-secondary-300 rounded-xl w-full py-3 text-lg font-semibold"
+              className="bg-blue-100 text-blue-500 rounded-xl w-full py-3 text-lg font-semibold"
             >
               완료
             </button>
 
             <Link
               href="/list"
-              className="bg-secondary-400 hover:bg-secondary-500 duration-200 cursor-pointer w-full text-center rounded-xl py-3 text-lg font-semibold"
+              className="bg-black-600 text-white duration-200 cursor-pointer w-full text-center rounded-xl py-3 text-lg font-semibold"
             >
               취소
             </Link>

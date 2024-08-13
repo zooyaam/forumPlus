@@ -28,7 +28,7 @@ export default async function ListCard({
   let session = await getServerSession(authOptions);
 
   return (
-    <div className="relative mx-auto w-full max-w-[700px] transition-all border cursor-pointer py-4 px-4 flex flex-col gap-4 bg-white rounded-xl duration-500 hover:drop-shadow-[0_25px_25px_rgba(0,0,0,0.05)]">
+    <div className="relative mx-auto w-full max-w-[700px] transition-all border cursor-pointer py-4 px-4 flex flex-col gap-4 bg-white rounded-xl duration-300 hover:translate-x-5 hover:drop-shadow-[0_25px_25px_rgba(0,0,0,0.05)]">
       <Link href={`/detail/${id}`}>
         <div>
           <div className="flex justify-between border-b pb-3">

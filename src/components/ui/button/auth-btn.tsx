@@ -13,7 +13,7 @@ export default function AuthBtn(type: AuthBtnProps) {
         onClick={() => {
           type.action === "sign-in" ? signIn() : signOut();
         }}
-        className="bg-black whitespace-nowrap py-2 px-4 font-medium rounded-lg text-white"
+        className="bg-white whitespace-nowrap py-2.5 px-5 font-normal rounded-lg"
       >
         {type.action === "sign-in" ? "로그인" : "로그아웃"}
       </button>
@@ -22,9 +22,9 @@ export default function AuthBtn(type: AuthBtnProps) {
     return (
       <Link
         href={"/register"}
-        className="bg-black whitespace-nowrap py-2 px-4 font-medium rounded-lg text-white"
+        className="bg-black-600 whitespace-nowrap py-3 px-5 font-normal rounded-lg text-white"
       >
-        회원가입
+        지금 시작하기
       </Link>
     );
   }

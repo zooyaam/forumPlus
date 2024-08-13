@@ -3,30 +3,32 @@
 import Link from "next/link";
 
 interface BtnTypeProps {
-  action: "edit" | "delete";
+  action: "edit" | "delete" | "report" | "message";
   id?: string;
 }
 
 export default function PostBtn({ action, id }: BtnTypeProps) {
   return (
     <div>
-      {action === "edit" ? (
+      {action === "edit" && (
         <Link href={`/edit/${id}`}>
-          <span className="cursor-pointer px-1">수정하기</span>
+          <span className="cursor-pointer px-2">수정하기</span>
         </Link>
-      ) : (
-        <span
-          onClick={(e) =>
-            fetch(`/api/post/delete`, { method: "DELETE", body: id }).then(
-              (r) => {
-                return console.log("a");
-              }
-            )
-          }
-          className="cursor-pointer px-1"
-        >
-          삭제하기
-        </span>
+      )}
+      {action === "delete" && (
+        <Link href={`/delete/${id}`}>
+          <span className="cursor-pointer px-2">삭제하기</span>
+        </Link>
+      )}
+      {action === "report" && (
+        <Link href={`/report/${id}`}>
+          <span className="cursor-pointer px-2">신고하기</span>
+        </Link>
+      )}
+      {action === "message" && (
+        <Link href={`/message/${id}`}>
+          <span className="cursor-pointer px-2">쪽지하기</span>
+        </Link>
       )}
     </div>
   );
